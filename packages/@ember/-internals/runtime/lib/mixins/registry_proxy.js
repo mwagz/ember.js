@@ -155,6 +155,16 @@ export default Mixin.create({
   /**
    Return registered options for a particular factory.
 
+   ```javascript
+   import Application from '@ember/Application';
+
+   let App = Application.create();
+   let appInstance = App.buildInstance();
+
+   appInstance.register('connection:twitter', TwitterConnection);
+   appInstance.registerOptions('connection:twitter', { singleton: false })
+   ```
+
    @public
    @method registeredOptions
    @param  {String} fullName
